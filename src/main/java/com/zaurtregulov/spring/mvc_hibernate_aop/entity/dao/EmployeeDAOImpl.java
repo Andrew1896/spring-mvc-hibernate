@@ -1,49 +1,22 @@
 package com.zaurtregulov.spring.mvc_hibernate_aop.entity.dao;
 
-//import com.mysql.cj.Session;
-//import com.mysql.cj.xdevapi.SessionFactory;
 import com.zaurtregulov.spring.mvc_hibernate_aop.entity.Employee;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.transaction.annotation.Transactional;
-//
-//import java.util.List;
-//
-//public class EmployeeDAOImpl implements EmployeeDAO {
-//@Autowired
-//    private SessionFactory sessionFactory;
-//
-//    @Override
-//    @Transactional
-//    public List<Employee> getAllEmployees() {
-//
-//    Session session = sessionFactory.getCurrentSession();
-//        List<Employee> allEmployees = session.createQuery("from Employee"
-//                , Employee.class).getResultList();
-//
-//        return null;
-//    }
-//}
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-
-//package com.potinga.spring.mvc.hibernateTest.aop.dao;
-//
-//        import com.potinga.spring.mvc.hibernateTest.aop.entity.Employee;
-        import org.hibernate.Query;
-        import org.hibernate.Session;
-        import org.hibernate.SessionFactory;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.stereotype.Repository;
-
-        import javax.transaction.Transactional;
-        import java.util.List;
-
+import java.util.List;
 @Repository
-public class EployeeDaoImpl implements EmployeeDAO {
+public class EmployeeDAOImpl implements EmployeeDAO {
+
     @Autowired
     private SessionFactory sessionFactory;
 
     @Override
-
+    @Transactional
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
         List<Employee> allEmployees = session.createQuery("from Employee",
@@ -70,7 +43,7 @@ public class EployeeDaoImpl implements EmployeeDAO {
 //        Query<Employee> query=session.createQuery("delete from Employee" + "where id =:employeeId");
         Query<Employee> query = session.createQuery("delete from Employee where id = :employeeId");
 
-        query.setParameter("employeeId",id);
+        query.setParameter("employeeId", id);
         query.executeUpdate();
     }
 }
