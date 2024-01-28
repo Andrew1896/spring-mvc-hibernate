@@ -2,10 +2,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-
 <h2> All Employees </h2>
 <br>
-
 <table>
 <tr>
 <th>Name</th>
@@ -20,8 +18,9 @@
 <td>${emp.department}</td>
 <td>${emp.salary}</td>
 </tr>
-
 </c:forEach>
+<br>
+<input type= "button" value="Add" onclick= "window.location.hrf = ''" />
 </table>
 </body>
 </html>
