@@ -7,7 +7,7 @@
 <table>
 <tr>
 <th>Name</th>
-<th>SurName</th>
+<th>Surname</th>
 <th>Department</th>
 <th>Salary</th>
 </tr>
@@ -20,7 +20,7 @@
 </tr>
 </c:forEach>
 <br>
-<input type= "button" value="Add" onclick= "window.location.hrf = ''" />
+<%-- <input type= "button" value="Add" onclick= "window.location.hrf = ''" /> --%>
 </table>
 </body>
 </html>

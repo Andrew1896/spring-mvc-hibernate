@@ -3,7 +3,7 @@ package com.zaurtregulov.spring.mvc_hibernate_aop.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="employees1")
+@Table(name="employees")
 public class Employee {
 
     @Id
@@ -33,16 +33,16 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", department='" + department + '\'' +
-                ", salary=" + salary +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", surname='" + surname + '\'' +
+//                ", department='" + department + '\'' +
+//                ", salary=" + salary +
+//                '}';
+//    }
 
     public int getId() {
         return id;
