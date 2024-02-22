@@ -3,24 +3,24 @@ package com.zaurtregulov.spring.mvc_hibernate_aop.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="employees")
+@Table(name = "employees")
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
-    @Column(name="name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name="surname")
+    @Column(name = "surname")
     private String surname;
 
-    @Column(name="department_id")
+    @Column(name = "department")
     private String department;
 
-    @Column(name="salary")
+    @Column(name = "salary")
     private int salary;
 
     public Employee() {
@@ -32,17 +32,6 @@ public class Employee {
         this.department = department;
         this.salary = salary;
     }
-
-//    @Override
-//    public String toString() {
-//        return "Employee{" +
-//                "id=" + id +
-//                ", name='" + name + '\'' +
-//                ", surname='" + surname + '\'' +
-//                ", department='" + department + '\'' +
-//                ", salary=" + salary +
-//                '}';
-//    }
 
     public int getId() {
         return id;
@@ -83,4 +72,15 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", surname='" + surname + '\'' +
+//                ", department='" + department + '\'' +
+//                ", salary=" + salary +
+//                '}';
+//    }
 }

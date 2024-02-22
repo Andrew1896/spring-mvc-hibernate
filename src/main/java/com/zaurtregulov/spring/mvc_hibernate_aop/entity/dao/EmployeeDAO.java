@@ -12,9 +12,9 @@ public interface EmployeeDAO {
     //        session.saveOrUpdate(employee);
     //    }
     //
-    Employee getEmployee(int id);
+//    Employee getEmployee(int id);
 //
-//    public void saveEmployee(Employee employee);
+    public void saveEmployee(Employee employee);
 //
 //    Employee getEmployee(int id);
 //
