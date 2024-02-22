@@ -1,14 +1,13 @@
 package com.zaurtregulov.spring.mvc_hibernate_aop.service;
 
-import com.zaurtregulov.spring.mvc_hibernate_aop.entity.Employee;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
-    @Override
-    public Employee getEmployee(int id) {
-        return null;
-    }
+//    @Override
+//    public Employee getEmployee(int id) {
+//        return null;
+//    }
 
 //    @Autowired
 //    private EmployeeDAO employeeDAO;

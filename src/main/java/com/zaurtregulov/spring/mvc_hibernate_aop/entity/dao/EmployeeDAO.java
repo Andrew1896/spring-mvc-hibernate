@@ -5,6 +5,14 @@ import java.util.List;
 
 public interface EmployeeDAO {
     public List<Employee> getAllEmployees();
+
+    //    @Override
+    //    public void saveEmployee(Employee employee) {
+    //        Session session = sessionFactory.getCurrentSession();
+    //        session.saveOrUpdate(employee);
+    //    }
+    //
+    Employee getEmployee(int id);
 //
 //    public void saveEmployee(Employee employee);
 //

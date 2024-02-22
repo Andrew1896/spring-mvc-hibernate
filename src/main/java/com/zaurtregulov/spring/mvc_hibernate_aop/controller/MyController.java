@@ -26,7 +26,7 @@ public class MyController {
         return "all-employees";
     }
 
-//    @RequestMapping("/addNewEmployee")
+    //    @RequestMapping("/addNewEmployee")
 //    public String addNewEmployee(Model model) {
 //        Employee employee = new Employee();
 //        model.addAttribute("employee", employee);
@@ -39,10 +39,12 @@ public class MyController {
 //        employeeService.saveEmployee(employee);
 //        return "redirect:/";
 //    }
-
+//
     @RequestMapping("/updateInfo")
     public String updateEmployee(@RequestParam("empId") int id, Model model) {
-        return "employee-info";
+        Employee employee = employeeDAO.getEmployee(id);
+        model.addAttribute("employee", employee);
 
+        return "employee-info";
     }
 }
