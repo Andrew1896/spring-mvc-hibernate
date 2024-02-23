@@ -6,17 +6,16 @@ import java.util.List;
 public interface EmployeeDAO {
     public List<Employee> getAllEmployees();
 
+    public void saveEmployee(Employee employee);
+
+    public Employee getEmployee(int id);
+
     //    @Override
     //    public void saveEmployee(Employee employee) {
     //        Session session = sessionFactory.getCurrentSession();
     //        session.saveOrUpdate(employee);
     //    }
     //
-//    Employee getEmployee(int id);
-//
-    public void saveEmployee(Employee employee);
-//
-//    Employee getEmployee(int id);
 //
 //    void deleteEmployee(int id);
 }
