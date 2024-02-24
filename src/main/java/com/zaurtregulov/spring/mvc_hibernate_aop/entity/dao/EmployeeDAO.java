@@ -10,6 +10,8 @@ public interface EmployeeDAO {
 
     public Employee getEmployee(int id);
 
+    public void deleteEmployee(int id);
+
     //    @Override
     //    public void saveEmployee(Employee employee) {
     //        Session session = sessionFactory.getCurrentSession();
